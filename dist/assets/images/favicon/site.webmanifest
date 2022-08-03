@@ -3,7 +3,7 @@
     "short_name": "Crypter",
     "icons": [
         {
-            "src": "assets/images/favicon/android-chrome-96x96.png",
+            "src": "dist/assets/images/favicon/android-chrome-96x96.png",
             "sizes": "96x96",
             "type": "image/png"
         }
