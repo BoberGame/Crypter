@@ -1,0 +1,137 @@
+.actions {
+	display: flex;
+	justify-content: space-between;
+
+	&--item {
+		flex-direction: column;
+
+		position: absolute;
+		top: 0;
+		right: -10rem;
+
+		@include breakpoint($tablet-bp) {
+			display: none;
+		}
+	}
+
+	&--mask {
+		margin: 0 -1.2rem;
+	}
+
+	&--profile {
+		justify-content: center;
+	}
+}
+
+.actions__icon {
+	position: relative;
+	width: 3.2rem;
+	height: 3.2rem;
+	padding: 0;
+
+	border: 0;
+	background-color: var(--color-bg-bl);
+	border-radius: 50%;
+	transition: background-color .2s linear;
+
+	svg {
+		width: 2rem;
+		height: 2rem;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		transform: translate3d(-50%, -50%, 0);
+		fill: $gray;
+	}
+
+	html.dark & {
+		&:hover {
+			background-color: $black;
+		}
+	}
+
+	&--sell {
+		width: 4.8rem;
+		height: 4.8rem;
+
+		border: 2px solid var(--color-sec);
+		background-color: transparent;
+		box-shadow: 0px 64px 64px -48px
+		rgba(31, 47, 70, 0.12);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		.actions--item & {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	&--profile {
+		width: 4rem;
+		height: 4rem;
+		margin-left: 0.8rem;
+	}
+
+	&--close {
+	
+		svg {
+			width: 1.4rem;
+			height: 1.4rem;
+		}
+
+		&:hover {
+			background-color: $black;
+		}
+	}
+
+	&--hot {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+
+		&:hover {
+			background-color: darken($white, 8%);
+
+		}
+	}
+
+	&--favorite {
+
+		&.active {
+			
+			svg {
+				fill: $primary-3;
+				
+			}
+		}
+	}
+
+	&--mask {
+		margin: 0 1.2rem;
+	}
+
+	html.dark & {
+
+		&--sell {
+			&:hover {
+				background-color: $black;
+			}
+		}
+
+		&--hot {
+			&:hover {
+				background-color: darken($black, 8%);
+			}
+		}
+
+		&--close {
+			&:hover {
+				background-color: $white;
+			}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+.nav {
+	display: flex;
+	position: relative;
+	align-items: center;
+
+	&:before {
+		content: "";
+		display: block;
+		width: 0.2rem;
+		height: 4rem;
+		
+		background: var(--color-sec);
+
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	@include breakpoint($tablet-bp) {
+		display: none;
+	}
+}
+
+.nav__link {
+	margin: 0 1.6rem;
+
+	font-size: 1.4rem;
+	font-weight: 700;
+	line-height: 1.2;
+	color: $gray;
+	transition: color .2s linear;
+
+	&:hover {
+		color: var(--color-bl);
+		text-decoration: none;
+	}
+}

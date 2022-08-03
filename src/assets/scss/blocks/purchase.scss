@@ -1,0 +1,63 @@
+.purchase__title {
+	margin-bottom: 3.2rem;
+
+	font-size: 3.2rem;
+	font-weight: 700;
+	color: $black;
+}
+
+.purchase__subtitle {
+	margin-bottom: 3.2rem;
+
+	color: $black;
+	font-size: 1.6rem;
+
+	&--connect {
+		text-align: center;
+		font-weight: 500;
+	}
+}
+
+.purchase__title-bid {
+	margin-bottom: 1.5rem;
+	
+	font-size: 2.4rem;
+	font-weight: 600;
+	color: $black;
+}
+
+.purchase__price {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 1rem;
+
+	border-bottom: 1px solid $neutrals-6;
+}
+
+.purchase__price,
+.purchase__count {
+	font-weight: 500;
+	font-size: 1.6rem;
+	color: $black;
+}
+
+.purchase__item {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1.2rem;
+}
+
+.purchase__info {
+	font-size: 1.6rem;
+	color: $gray;
+}
+
+.purchase__footer {
+	margin-top: 3.2rem;
+}
+
+.purchase__img {
+	display: block;
+	margin-top: 7rem;
+	margin-bottom: 3.2rem;
+}

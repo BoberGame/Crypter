@@ -1,0 +1,115 @@
+.discovery {
+	margin: 8rem 0 $md-main;
+
+	@include breakpoint($tablet-bp) {
+		margin: 6rem 0 $md-main-tb;
+	}
+
+	@include breakpoint($mobile-bp) {
+		margin-top: 3.2rem;
+	}
+}
+
+.discovery__header {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 3.2rem;
+
+	border-bottom: 1px solid var(--color-sec);
+
+	@include breakpoint($mobile-bp) {
+		flex-direction: column;
+		align-items: flex-start;
+
+		border-bottom: 0;
+		padding-bottom: 0;
+
+		& .btn--filter {
+			max-width: 31.1rem;
+			width: 100%;
+
+			text-align: center;
+
+			button {
+				display: none;
+			}
+		}
+	}
+}
+
+.discovery__filters {
+	display: flex;
+	padding-top: 3.2rem;
+	margin: 0 -1.6rem;
+
+	@include breakpoint($mobile-bp) {
+		display: none;
+	}
+}
+
+.discovery__filters-item {
+	width: 100%;
+	margin: 0 1.6rem;
+
+	@include breakpoint($tablet-bp) {
+		&.hidden {
+			display: none;
+		}
+	}
+}
+
+.discovery__filters-title {
+	margin-bottom: 1.2rem;
+
+	font-size: 1.2rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $neutrals-5;
+}
+
+.discovery__container {
+	position: relative;
+}
+
+.discovery__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 3.2rem -1.6rem;
+	// max-height: 100.3rem;
+	overflow: hidden;
+	
+	@include breakpoint($mobile-sm-bp) {
+		flex-wrap: nowrap;
+		overflow: visible;
+		margin: 3.2rem 0;
+	}
+}
+
+.discovery__btn {
+	text-align: center;
+	line-height: 1;
+
+	svg {
+		width: 1.4rem;
+		height: 1.4rem;	
+	}
+
+	&.load-animate {
+		svg {
+			animation: rotate 2s infinite linear;
+		}
+	}
+
+
+	@include breakpoint($mobile-sm-bp) {
+		display: none;
+
+		&--profile {
+			display: inline-block;
+		}
+	}
+}
+
+@keyframes rotate {
+	100% {transform: rotate(360deg);}
+}

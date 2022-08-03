@@ -1,0 +1,146 @@
+.footer {
+	padding-top: 8rem;
+	width: 100%;
+
+	border-top: 1px solid var(--color-sec);
+}
+
+.footer__wrapper {
+	display: flex;
+	padding-bottom: 4.5rem;
+
+	border-bottom: 1px solid var(--color-sec);
+
+	@include breakpoint($mobile-bp) {
+		flex-direction: column;
+	}
+}
+
+.footer__col {
+	margin-right: 9rem;
+
+	@include breakpoint($tablet-bp) {
+		margin-right: 6rem;
+	}
+
+	@include breakpoint($mobile-bp) {
+		margin: 0 0 3.2rem;
+		padding-bottom: 3.2rem;
+
+		border-bottom: 1px solid var(--color-sec);
+	}
+}
+
+.footer__header {
+	max-width: 25.6rem;
+	margin-right: 10rem;
+
+	@include breakpoint($tablet-bp) {
+		margin-right: 8rem;
+		max-width: 19rem;
+	}
+
+	@include breakpoint($mobile-bp) {
+		max-width: none;
+		margin: 0 0 3.2rem;
+		padding-bottom: 3.2rem;
+
+		border-bottom: 1px solid var(--color-sec);
+	}
+}
+
+.footer__logo {
+	display: block;
+}
+
+.footer__subtitle {
+	margin-top: 3.2rem;
+
+	font-size: 2.4rem;
+	color: var(--color-bl);
+
+	@include breakpoint($tablet-bp) {
+		font-size: calc(2.4rem - .8rem);
+	}
+}
+
+.footer__link {
+	font-size: 1.4rem;
+	font-weight: 700;
+	color: $gray;
+
+	a {
+		color: inherit;
+	}
+
+	& + & {
+		margin-top: 2.4rem;
+	}
+}
+
+.footer__link-title {
+	margin-bottom: 4rem;
+
+	font-size: 1.6rem;
+	color: var(--color-bl);
+	font-weight: 500;
+
+	@include breakpoint($mobile-bp) {
+		margin-bottom: 3rem;
+	}
+}
+
+.footer__form {
+	max-width: 35rem;
+	margin-left: 5rem;
+
+	@include breakpoint($tablet-bp) {
+		max-width: 31rem;
+	}
+
+	@include breakpoint($mobile-bp) {
+		margin: 0;
+	}
+}
+
+.footer__text {
+	font-size: 1.4rem;
+	font-weight: 400;
+	color: var(--color-pr);
+}
+
+.footer__copyright {
+	display: flex;
+	justify-content: space-between;
+	margin: 3.2rem 0;
+
+	font-size: 1.2rem;
+}
+
+.footer__copyright-left {
+	color: $gray;
+	
+	@include breakpoint($mobile-bp) {
+		margin: 0 auto;
+	}
+
+}
+
+.footer__copyright-right {
+	color: var(--color-bl);
+
+	a {
+		margin-left: 1.5rem;
+
+		color: $primary-1;
+		font-weight: 600;
+	}
+
+	@include breakpoint($mobile-bp) {
+		display: none;
+	}
+
+	&.hide {
+		display: none;
+	}
+}

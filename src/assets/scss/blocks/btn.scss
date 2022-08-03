@@ -1,0 +1,127 @@
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	padding: .75em 1.14em;
+
+	font-size: 1.4rem;
+	text-decoration: none;
+	line-height: 1.1;
+	white-space: nowrap;
+	font-family: inherit;
+	font-weight: 700;
+
+	border-radius: 6.42em;
+	border: 2px solid transparent;
+	background: none;
+	color: $white;
+	transition: background-color .2s linear,
+	border .2s linear, color .2s linear,
+	fill .2s linear;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&--light {
+		color: var(--color-text);
+		border: 2px solid var(--color-sec);
+
+		html.dark & {
+			border-color: $gray;
+
+			&:hover,
+			&:focus {
+				border-color: var(--color-bl);
+			}
+		}
+
+		&:hover,
+		&:focus {
+			background-color: var(--color-bl);
+			color: var(--color-bg);
+			border-color: var(--color-bl);
+		}
+	}
+
+	&--with-img {
+		svg {
+			margin: auto 0 auto .3rem;
+			vertical-align: middle;
+			fill: var(--color-bl);
+		}
+
+		&--white {
+			svg {
+				fill: $white;
+			}
+		}
+
+		&:hover,
+		&:focus {
+			svg {
+				fill: var(--color-bg-bl);
+			}
+		}
+	}
+
+	&--blue {
+		background-color: $primary-1;
+		color: $white;
+
+		&:hover,
+		&:focus {
+			background-color: darken($primary-1, 7%);
+		}
+	}
+
+	&--sm {
+		padding: .57em .85em;
+	}
+
+	&--light-blue {
+		color: var(--color-bl);
+		border: 2px solid var(--color-sec);
+
+		&:hover,
+		&:focus {
+			background-color: darken($primary-1, 7%);
+			border: 2px solid darken($primary-1, 7%);
+			color: $white;
+		}
+	}
+
+	&--big {
+		width: 100%;
+
+		font-size: 1.6rem;
+		text-align: center;
+	}
+
+	&--filter {
+		padding: .9em 1.5em;
+
+		font-size: 1.6rem;
+		line-height: 1;
+	}
+
+	&--transparent {
+		background: transparent;
+		border: 2px solid $gray;
+
+		svg {
+			width: 1.6rem;
+			height: 1.6rem;
+			fill: $white;
+		}
+
+		&:hover {
+			background-color: $white;
+			border-color: $white;
+			color: $black;
+
+			svg {
+				fill: $black;
+			}
+		}
+	}
+}

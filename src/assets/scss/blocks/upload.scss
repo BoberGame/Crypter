@@ -1,0 +1,209 @@
+.upload {
+	margin: 8rem 0 $md-main;
+
+	text-align: center;
+
+	@include breakpoint($mobile-bp) {
+		margin-bottom: $md-main-mb;
+	}
+}
+
+.upload__header {
+	margin-bottom: 8rem;
+
+	@include breakpoint($mobile-bp) {
+		margin-bottom: 2rem;
+	}
+}
+
+.upload__title {
+	font-size: 4.8rem;
+	color: var(--color-bl);
+	font-weight: 700;
+
+	&--create {
+		@include breakpoint($tablet-bp) {
+			font-size: 3.6rem;
+		}
+
+		@include breakpoint($mobile-bp) {
+			order: 1;
+			font-size: 4.8rem;
+		}
+	}
+}
+
+.upload__description {
+	margin: 0 auto;
+	max-width: 73rem;
+
+	font-size: 1.4rem;
+	color: $gray;
+
+	b {
+		color: var(--color-bl);
+	}
+}
+
+.upload__wrapper {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 3.2rem;
+
+	@include breakpoint($mobile-bp) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	&--connect {
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 0;
+
+		@include breakpoint($mobile-bp) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+}
+
+.upload__wrapper-item {
+	padding: 1.6rem 1.6rem 2.4rem;
+	margin-right: 3.2rem;
+
+	border: 1px solid var(--color-sec);
+	border-radius: 1.6rem;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	@include breakpoint($mobile-bp) {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		padding: 3.2rem 0;
+		position: relative;
+
+		border: 0;
+		border-radius: 0;
+		border-bottom: 1px solid $neutrals-6;
+
+		.btn {
+			border: 0;
+			padding: 0;
+			font-size: 1.6rem;
+		}
+	}
+}
+
+.upload__item-preview {
+	margin-bottom: 2.4rem;
+	overflow: hidden;
+
+	border-radius: 0.8rem;
+
+	@include breakpoint($mobile-bp) {
+		margin: 0 2rem 0 0;
+		border-radius: 50%;
+
+		img {
+			object-fit: cover;
+		}
+	}
+}
+
+.upload__link {
+	display: none;
+
+	@include breakpoint($mobile-bp) {
+		display: block;
+
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+	}
+	
+}
+
+.upload-arrow-icon {
+	width: 1.2rem;
+	height: 1.2rem;
+
+	fill: $gray;
+}
+
+.upload__subtitle {
+	font-size: 1.2rem;
+	color: $gray;
+}
+
+.upload__left {
+	@include breakpoint($mobile-bp) {
+		margin-bottom: 4.5rem;
+	}
+}
+
+.upload__left-item {
+	display: flex;
+	align-items: center;
+
+	& + & {
+		margin-top: 6.4rem;
+	}
+}
+
+.upload__img {
+	position: relative;
+	margin-right: 3.2rem;
+	width: 6.4rem;
+	height: 6.4rem;
+
+	background-color: $primary-2;
+	border-radius: 50%;
+
+	&--blue {
+		background-color: $primary-1;
+	}
+
+	&--green {
+		background-color: $primary-4;
+	}
+
+	&--red {
+		background-color: $primary-3;
+	}
+
+	&--modal {
+		width: 8rem;
+		height: 8rem;
+		margin: 0 auto;
+	}
+}
+
+.upload__icon-wallet {
+	width: 2.4rem;
+	height: 2.4rem;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0);
+
+	fill: $white;
+}
+
+.upload__name {
+	font-size: 2.4rem;
+	font-weight: 600;
+	color: var(--color-bl);
+}
+
+.upload__right-preview {
+	display: block;
+	max-width: 100%;
+	height: auto;
+
+	border-radius: 2.4rem;
+}

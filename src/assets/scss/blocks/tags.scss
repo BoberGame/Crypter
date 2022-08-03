@@ -1,0 +1,75 @@
+.tags-rank {
+	display: flex;
+	justify-content: space-between;
+	margin-right: 4.5rem;
+	width: 5.4rem;
+	padding: .4rem .8rem;
+	
+	border-radius: 2.4rem;
+	background: none;
+	font-size: 1.2rem;
+	color: $white;
+	font-weight: 600;
+
+	svg {
+		width: 1.6rem;
+		height: 1.6rem;
+
+		fill: $white;
+	}
+
+	&--blue {
+		background-color: $primary-1;
+	}
+
+	&--purple {
+		background-color: $primary-2;
+	}
+
+	&--green {
+		background-color: $primary-4;
+	}
+
+	&--red {
+		background-color: $primary-3;
+	}
+}
+
+.tags-label {
+	margin: 1rem;
+	display: inline-block;
+	padding: .7rem .8rem;
+
+	color: $white;
+	font-size: 1.2rem;
+	line-height: 1;
+	font-weight: 700;
+	text-transform: uppercase;
+	background: none;
+	border-radius: .4rem;
+
+	&--green {
+		background-color: $primary-4;
+	}
+
+	&--black {
+		background-color: $black;
+	}
+
+	&--purple {
+		background-color: $primary-2;
+	}
+
+	&--item {
+		margin: 0 1rem 0 0;
+	}
+}
+
+.tags__wrapper {
+	display: flex;
+
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+	z-index: 2;
+}

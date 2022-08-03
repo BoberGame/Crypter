@@ -1,0 +1,64 @@
+.subnav-tabs {
+	
+	// &--profile {
+	// 	overflow: scroll;
+
+	// }
+}
+
+.subnav-tabs__list {
+	display: flex;
+	align-items: center;
+	margin: 0 -.6rem;
+
+	&--sell {
+		margin-bottom: 3rem;
+		padding: .6rem;
+
+		border: 2px solid var(--color-sec);
+		border-radius: 3.6rem;
+	}
+
+	@include breakpoint($tablet-bp) {
+		max-width: 37rem;
+		overflow: hidden;
+	}
+
+	@include breakpoint($mobile-bp) {
+		display: none;
+	}
+
+	&--profile {
+		@include breakpoint($tablet-bp) {
+			max-width: none;
+			overflow: auto;
+			padding: 0 1rem 1rem;
+		}
+
+		@include breakpoint($mobile-bp) {
+			display: flex;
+		}
+	}
+
+	&--item {
+		@include breakpoint($mobile-bp) {
+			display: flex;
+		}
+	}
+}
+
+.subnav-tabs__item {
+	margin: 0 .6rem;
+
+	&--profile {
+
+		
+
+		@include breakpoint($tablet-bp) {
+			flex-shrink: 0;
+			width: 20%;
+			height: 100%;
+			margin: 0;
+		}
+	}
+}

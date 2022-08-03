@@ -1,0 +1,180 @@
+.sell {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10rem;
+	margin-top: $md-main;
+	position: relative;
+
+	@include breakpoint($tablet-bp) {
+		margin-top: $md-main-tb;
+	}
+
+	@include breakpoint($mobile-bp) {
+		margin-top: $md-main-mb;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&--item {
+		margin-top: 0;
+
+		@include breakpoint($tablet-sm-bp) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+}
+
+.sell__left {
+	width: 62.8%;
+	margin-right: 12rem;
+	overflow: hidden;
+	
+	border-radius: 2rem;
+
+	video {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+
+	img {
+		display: block;
+	}
+
+	@include breakpoint($tablet-bp) {
+		margin-right: 4rem;
+		max-width: 53rem;
+	}
+
+	@include breakpoint($tablet-sm-bp) {
+		img {
+			max-width: 100%;
+
+			border-radius: 2rem;
+		}
+	}
+
+	@include breakpoint($mobile-bp) {
+		width: 100%;
+		max-width: none; 
+		margin: 0 0 4rem;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&--item {
+		margin-right: 10rem;
+		max-height: 77rem;
+		position: relative;
+
+		@include breakpoint($tablet-sm-bp) {
+			width: auto;
+			max-width: none;
+			margin-right: 0;
+			margin-bottom: 3rem;
+		}
+	}
+}
+
+.sell__mask {
+	display: none;
+	padding: .8rem;
+
+	position: absolute;
+	bottom: 2.4rem;
+	left: 50%;
+	transform: translateX(-50%);
+
+	background-color: var(--color-bg-bl);
+	border-radius: 6.4rem;
+
+	@include breakpoint($tablet-bp) {
+		display: block;
+	}
+}
+
+.sell__right {
+	width: 37.2%;
+
+	@include breakpoint($tablet-bp) {
+		max-width: 31rem;
+	}
+
+	@include breakpoint($mobile-bp) {
+		width: 100%;
+		max-width: none; 
+	}
+
+	&--item {
+		@include breakpoint($tablet-bp) {
+			max-width: none;
+		}
+
+		@include breakpoint($tablet-sm-bp) {
+			width: 100%;
+			max-width: 64rem;
+		}
+	}
+}
+
+.sell__title {
+	margin-bottom: 2rem;
+
+	font-size: 6.4rem;
+	font-weight: 700;
+	line-height: 1;
+	color: var(--color-bl);
+
+	@include breakpoint($tablet-sm-bp) {
+		font-size: 4.8rem;
+	}
+
+	@include breakpoint($mobile-bp) {
+		font-size: 6.4rem;
+	}
+
+	&--item {
+		margin-bottom: 1rem;
+
+		font-size: 4rem;
+	}
+}
+
+.sell__info {
+	display: flex;
+	align-items: center;
+	margin-bottom: 4rem;
+
+	font-size: 1.6rem;
+	font-weight: 700;
+	color: $gray;
+}
+
+.sell__price {
+	padding: .5rem .6rem;
+	margin: 0 1rem;
+	
+	line-height: 1;
+	border-radius: 0.4rem;
+	border: 2px solid var(--color-sec);
+}
+
+.sell__description {
+	margin-bottom: 3rem;
+
+	font-size: 1.6rem;
+	color: $gray;
+
+	a {
+		color: var(--color-bl);
+	}
+
+	&--item {
+		@include breakpoint($tablet-sm-bp) {
+			font-size: 1.4rem;
+		}
+	}
+}

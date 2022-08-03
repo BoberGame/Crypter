@@ -1,0 +1,16 @@
+.main {
+	padding: calc($md-main + $header-height) 0 0;
+
+	&--low {
+		padding: calc($header-height) 0 0;
+	}
+
+	@include breakpoint($tablet-bp) {
+		padding: calc($md-main-tb + $header-height) 0 0;
+	}
+}
+
+.main__title {
+	font-size: 4rem;
+	font-weight: 700;
+}

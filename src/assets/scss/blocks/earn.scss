@@ -1,0 +1,29 @@
+.earn {
+	padding: calc($pd-main * 2) 0;
+	
+	border-top: 1px solid var(--color-sec);
+	background: url(../images/earn-bg.png)
+	center right 16rem no-repeat;
+
+	@include breakpoint($tablet-bp) {
+		padding: $pd-main 0;
+
+		background-position: center right 8rem;
+		background-size: 42rem;
+	}
+
+	@include breakpoint($mobile-bp) {
+		padding: $pd-main-mb 0 25rem;
+
+		background-position: center bottom;
+		background-size: 26rem;
+		text-align: center;
+	}
+}
+
+.earn__subtitle {
+	margin-bottom: 4rem;
+
+	font-size: 1.6rem;
+	color: $gray;
+}

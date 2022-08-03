@@ -1,0 +1,131 @@
+.notification {
+	display: none;
+	width: 39.6rem;
+	padding: 4rem 1.6rem 3.2rem;
+
+	background-color: var(--color-bg);
+	box-shadow: 0 1.6rem 6.4rem 0 
+	rgba(31, 47, 70, 0.4);
+	border-radius: 2.4rem;
+
+	position: absolute;
+	top: 155%;
+	right: 50%;
+	transform: translateX(50%);
+
+	html.dark & {
+		
+		box-shadow: 0px 16px 64px -48px
+		rgba(18, 27, 40, 0.8);
+	}
+
+	// &:before {
+	// 	content: ""; 
+	// 	margin-left: -18px;
+		
+	// 	position: absolute;   
+	// 	bottom: 100%;
+	// 	left: 50%;
+
+	// 	border: solid transparent;
+	// 	border-bottom-color: $white;
+	// 	border-width: 16px;
+
+	// 	@include breakpoint($tablet-sm-bp) {
+	// 		left: 81%;
+	// 		display: none;
+	// 	}
+	// }
+
+	@include breakpoint($tablet-sm-bp) {
+		right: 0;
+		transform: none;
+	}
+
+	@include breakpoint($mobile-sm-bp) {
+		right: -1rem;
+		width: 34.4rem;
+	}
+
+	&.active {
+		display: block;
+	}
+}
+
+.notification__header {
+	padding: 0 1.6rem;
+	margin-bottom: 1.6rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@include breakpoint($mobile-sm-bp) {
+		button {
+			display: none;
+		}
+	}
+}
+
+.notification__title {
+	font-size: 3.2rem;
+	font-weight: 700;
+	color: var(--color-text);
+}
+
+.notification__item {
+	display: flex;
+	padding: 1.6rem;
+	position: relative;
+
+	cursor: pointer;
+
+	&:after {
+		content: "";
+		width: 1.2rem;
+		height: 1.2rem;
+		background-color: $primary-1;
+		border-radius: 50%;
+
+		position: absolute;
+		top: 4.4rem;
+		right: 1.6rem;
+	}
+
+	&:hover {
+		html.light  &{
+			background-color: darken($white, 5%);
+		}
+
+		html.dark  &{
+			background-color: darken($black, 5%);
+		}
+	}
+}
+
+.notification__img {
+	margin-right: 2rem;
+	height: 6.4rem;
+	overflow: hidden;
+	border-radius: 1.6rem;
+}
+
+.notification__name {
+	font-size: 1.6rem;
+	font-weight: 500;
+	color: var(--color-text);
+
+	a {
+		color: inherit;
+	}
+}
+
+.notification__subtitle {
+	font-size: 1.4rem;
+	font-weight: 500;
+	color: $dark;
+}
+
+.notification__date {
+	font-size: 1.2rem;
+	color: $gray;
+}

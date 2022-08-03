@@ -1,0 +1,141 @@
+.popular {
+	padding: $pd-main 0;
+
+	background-color: $neutrals-7;
+
+	html.dark & {
+		background-color: $black;
+	}
+
+	@include breakpoint($tablet-bp) {
+		padding: $pd-main-tb 0 18rem;
+	}
+
+	@include breakpoint($mobile-bp) {
+		padding: $pd-main-mb 0 $pd-main-tb;
+	}
+}
+
+.popular__section-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@include breakpoint($mobile-bp) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+.popular__select {
+	max-width: 25.6rem;
+	width: 100%;
+}
+
+.popular__slider {
+	margin-top: 6rem;
+	position: relative;
+}
+
+.popular__wrapper {
+	display: flex;
+	min-width: 0;
+}
+
+.popular__item {
+	width: 20%;
+	padding: 2.4rem;
+	
+	background: var(--color-bg);
+	border-radius: 1.6rem;
+
+	@include breakpoint($tablet-bp) {
+		width: 25%;
+	}
+}
+
+.popular__header {
+	padding-bottom: 2.4rem;
+
+	border-bottom: 1px solid var(--color-sec);
+}
+
+.popular__activities {
+	display: flex;
+	align-items: center;
+}
+
+.popular__activities-item {
+	width: 2rem;
+	height: 2rem;
+
+	& + & {
+		margin-left: 1rem;
+	}
+}
+
+.popular__activities-btn {
+	padding: 0;
+
+	border: 0;
+	fill: $neutrals-5;
+	transition: fill .2s linear;
+
+	svg {
+		width: 2rem;
+		height: 2rem;
+	}
+
+	&:hover {
+		fill: var(--color-bl);
+	}
+}
+
+.popular__profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 2.4rem;
+
+	&--item {
+		flex-direction: row;
+		padding: 1.5rem 0;
+
+		border-bottom: 1px solid var(--color-sec);
+	}
+}
+
+.popular__avatar {
+	margin-bottom: 1.5rem;
+	overflow: hidden;
+	position: relative;
+
+	&--item {
+		margin: 0 1.5rem 0 0;
+	}
+}
+
+.popular__photo {
+	width: 6.4rem;
+	
+	border-radius: 100%;
+	background-color: $secondary-2;
+}
+
+.popular__verifed {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+
+	width: 2.4rem;
+	height: 2.4rem;
+}
+
+.popular__name {
+	font-size: 1.4rem;
+	font-weight: 500;
+	color: var(--color-bl);
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}

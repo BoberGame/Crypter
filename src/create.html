@@ -1,0 +1,197 @@
+---
+layout: default
+title: Create
+---
+
+<!-- Create -->
+<div class="container">
+	<div class="create">
+		<div class="create__left">
+			<div class="create__header">
+				<h1 class="upload__title upload__title--create">Create single collectible</h1>
+				<a href="create.html" class="btn btn--light-blue">Switch to Multiple</a>
+			</div>
+
+			<form class="form" action="/" method="post">
+				<h2 class="create__title">Upload file</h2>
+				<div class="create__subtitle">Drag or choose your file to upload</div>
+				<label class="form__label form__label--upload" for="input__file-1">PNG, GIF, WEBP, MP4 or MP3. Max 1Gb.</label>
+				<input class="form__input form__input--upload" type="file" id="input__file-1">
+			</form>
+
+			<div class="create__details">
+				<h2 class="create__title">Item Details</h2>
+				<div class="create__item">
+					<label class="create__name" for="input__file-2">Item name</label>
+					<input class="form__input form__input--details" id="input__file-2" type="text" placeholder='e. g. "Redeemable Bitcoin Card with logo"'>
+				</div>
+				<div class="create__item">
+					<label class="create__name" for="input__file-3">Description</label>
+					<input class="form__input form__input--details" id="input__file-3" type="text" placeholder="e. g. “After purchasing you will able to recived the logo...”">
+				</div>
+				<div class="create__wrapper">
+					<div class="create__item">
+						<label class="create__name">Royalties</label>
+
+						<div class="select select--create">
+							<div class="select__header">
+								<span class="select__current">10%</span>
+								<div class="select__icon">
+									<svg>
+										<use href="#arrow-down-icon"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="select__body">
+								<div class="select__item">10%</div>
+								<div class="select__item">20%</div>
+								<div class="select__item">50%</div>
+								<div class="select__item">100%</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="create__item">
+						<label class="create__name" for="input__file-4">Size</label>
+						<input class="form__input form__input--details" id="input__file-4" type="text" placeholder="e. g. Size">
+					</div>
+					<div class="create__item">
+						<label class="create__name" for="input__file-5">Propertie</label>
+						<input class="form__input form__input--details" id="input__file-5" type="text" placeholder="e. g. Propertie">
+					</div>
+				</div><!-- /.create__wrapper -->
+			</div><!-- /.create__details -->
+
+			<div class="create__item">
+				<div class="create__item-header">
+					<h2 class="create__title">Put on sale</h2>
+					<label class="form__checkbox-label" for="form__checkbox-1">
+						<input class="form__checkbox" type="checkbox" id="form__checkbox-1">
+						<div class="form__checkbox-group"></div>
+					</label>
+				</div>
+				<div class="create__subtitle">You’ll receive bids on this item</div>
+			</div>
+
+			<div class="create__item">
+				<div class="create__item-header">
+					<h2 class="create__title">Instant sale price</h2>
+					<label class="form__checkbox-label" for="form__checkbox-2">
+						<input class="form__checkbox" type="checkbox" id="form__checkbox-2">
+						<div class="form__checkbox-group"></div>
+					</label>
+				</div>
+				<div class="create__subtitle">Enter the price for which the item will be instantly sold</div>
+			</div>
+
+			<div class="create__item">
+				<div class="create__item-header">
+					<h2 class="create__title">Unlock once purchased</h2>
+					<label class="form__checkbox-label" for="form__checkbox-3">
+						<input class="form__checkbox" type="checkbox" id="form__checkbox-3">
+						<div class="form__checkbox-group"></div>
+					</label>
+				</div>
+				<div class="create__subtitle">Content will be unlocked after successful transaction</div>
+			</div>
+
+			<div class="create__item">
+				<h2 class="create__title">Choose collection</h2>
+				<div class="create__subtitle">Choose an exiting collection or create a new one</div>
+			</div>
+
+			<div class="create__collection">
+				<div class="create__collection-item">
+					<button class="create__collection-btn" type="button">
+						<span class="create__round create__round--add">
+							<svg>
+								<use href="#plus-simple-icon"></use>
+							</svg>
+						</span>
+						<span class="create__collection-title create__collection-title--add">Create collection</span>
+					</button>
+				</div>
+
+				<div class="create__collection-item">
+					<button class="create__collection-btn" type="button">
+						<span class="create__round create__round--green"></span>
+						<span class="create__collection-title">Crypto Legend - Professor</span>
+					</button>
+				</div>
+
+				<div class="create__collection-item">
+					<button class="create__collection-btn" type="button">
+						<span class="create__round create__round--red"></span>
+						<span class="create__collection-title">Crypto Legend - Professor</span>
+					</button>
+				</div>
+
+				<div class="create__collection-item">
+					<button class="create__collection-btn" type="button">
+						<span class="create__round create__round--purple"></span>
+						<span class="create__collection-title">Legend Photography</span>
+					</button>
+				</div>
+			</div><!-- /.create__collection -->
+
+			<div class="create__left-footer">
+				<button class="btn btn--big btn--light create__preview-btn" type="button">Preview</button>
+				<button class="btn btn--big btn--blue btn--with-img btn--with-img--white" type="button" id="createBtn">Create item
+					<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M6.39412 0.843309C6.66467 0.593571 7.08644 0.61044 7.33618 0.880985L9.49003 3.21429C9.72576 3.46967 9.72576 3.86329 9.49003 4.11867L7.33619 6.45203C7.08645 6.72257 6.66468 6.73945 6.39413 6.48971C6.12358 6.23998 6.10671 5.81821 6.35644 5.54766L7.47752 4.33315L1.00016 4.33315C0.631972 4.33315 0.333496 4.03467 0.333496 3.66648C0.333496 3.29829 0.631972 2.99982 1.00016 2.99982L7.47749 2.99982L6.35645 1.78536C6.10671 1.51482 6.12358 1.09305 6.39412 0.843309Z"/>
+					</svg>
+				</button>
+				<span class="create__loading">Auto saving
+					<svg>
+						<use href="#load-icon"></use>
+					</svg>
+				</span>
+			</div><!-- /.create__left-footer -->
+		</div><!-- /.create__left -->
+
+		<div class="create__right">
+
+			<div class="create__preview">
+				<button class="create__close" id="createCloseBtn" type="button">
+					<svg>
+						<use href="#close-icon"></use>
+					</svg>
+				</button>
+				<h3 class="create__right-title">Preview</h3>
+
+				<div class="hot-bid__item hot-bid__item--create">
+					<div class="hot-bid__preview">
+						<img class="img" src="assets/images/hot-bid/1.jpg" alt="">
+					</div>
+					<div class="hot-bid__description">
+						<h4 class="hot-bid__title">Amazing digital art</h4>
+						<div class="bid__price">2.45 ETH</div>
+					</div>
+					<div class="hot-bid__info">
+						<div class="hot-bid__users">
+							<img class="hot-bid__avatar" src="assets/images/info-img-1.png" alt="photo">
+							<img class="hot-bid__avatar hot-bid__avatar--next" src="assets/images/info-img-1.png" alt="photo">
+							<img class="hot-bid__avatar hot-bid__avatar--next" src="assets/images/info-img-1.png" alt="photo">
+						</div>
+						<span class="hot-bid__count">3 in stock</span>
+					</div>
+					<div class="hot-bid__footer">
+						<div class="hot-bid__footer-wrapper">
+							<svg class="hot-bid__footer-icon">
+								<use href="#candlesticks-up-icon"></use>
+							</svg>
+							<span class="hot-bid__status">Highest bid<b>0.001 ETH</b></span>
+						</div>
+						<span class="hot-bid__status">New bid 🔥</span>
+					</div>
+				</div><!-- /.hot-bid__item -->
+
+				<a class="create__clean" href="#">
+					<svg>
+						<use href="#close-circle-icon"></use>
+					</svg>
+				Clear all</a>
+			</div><!-- /.create__preview -->
+		</div><!-- /.create__right -->
+	</div><!-- /.create -->
+</div><!-- /.container -->

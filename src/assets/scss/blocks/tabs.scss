@@ -1,0 +1,11 @@
+.tabs__btn {
+	padding: .6rem 1.2rem;
+
+	color: $gray;
+	transition: none;
+
+	&.active {
+		background-color: var(--color-pr);
+		color: var(--color-bg-bl);
+	}
+}

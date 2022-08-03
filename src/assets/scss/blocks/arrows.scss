@@ -1,0 +1,62 @@
+.arrows {
+	@include breakpoint($tablet-bp) {
+		display: flex;
+		
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: -10rem;
+
+		&--collections {
+			bottom: 2rem;
+		}
+
+		&--discovery {
+			bottom: -5rem;
+		}
+	}
+}
+
+.arrow {
+	width: 4rem;
+	height: 4rem;
+
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 2;
+
+	background: url(../images/icons/arrow-left.svg)
+	center no-repeat;
+	border: 2px solid $neutrals-6;
+	border-radius: 50%;
+	cursor: pointer;
+
+	&--prev {
+		left: -7.2rem;
+	}
+
+	&--next {
+		transform: translateY(-50%) rotate(180deg);
+		right: -7.2rem;
+	}
+
+	&.swiper-button-disabled {
+		border: 0;
+	}
+
+	@include breakpoint($tablet-bp) {
+		margin: 0 1.6rem;
+		position: static;
+	}
+
+}
+
+/* Slider */
+.discovery__container.swiper {
+	overflow: visible;
+}
+
+.profile__main-wrapper .swiper-slide {
+	width: auto;
+}

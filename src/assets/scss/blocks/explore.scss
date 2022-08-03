@@ -1,0 +1,54 @@
+.explore {
+	margin-bottom: $md-main;
+}
+
+.explore__title {
+	margin-bottom: 4.5rem;
+
+	text-align: center;
+	font-size: 2.4rem;
+	color: var(--color-bl);
+	font-weight: 600;
+}
+
+.explore__wrapper {
+	display: flex;
+}
+
+.explore__item {
+	width: 25%;
+	display: flex;
+	padding: 1rem;
+
+	border: 1px solid var(--color-sec);
+	border-radius: 7.6rem;
+	cursor: pointer;
+	transition: box-shadow .2s linear;
+
+	&:hover {
+		box-shadow: 0px 24px 24px -16px
+		rgba(15, 15, 15, 0.2);
+	}
+
+}
+
+.explore__photo {
+	margin-right: 1rem;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.explore__name {
+	font-size: 1.6rem;
+	font-weight: 500;
+	color: var(--color-text);
+
+	a {
+		color: inherit;
+	}
+}
+
+.explore__count {
+	font-size: 1.2rem;
+	color: $gray;
+}

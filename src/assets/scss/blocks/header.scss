@@ -1,0 +1,307 @@
+.header {
+	width: 100%;
+	height: $header-height;
+	padding: 2rem 0;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: $z-index-header;
+
+	background-color: var(--color-bg);
+	border-bottom: 1px solid var(--color-sec);
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+}
+
+.header__left {
+	width: 40%;
+	display: flex;
+
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.header__logo-wrapper {
+	display: flex;
+	align-items: center;
+
+	span {
+		margin: 0 3rem 0 .8rem;
+
+		font-size: 2.4rem;
+		line-height: 1.6;
+		font-weight: 600;
+		color: var(--color-bl);
+	}
+}
+
+.header__logo {
+	width: 3.2rem;
+	height: 3.2rem;
+	display: block;
+}
+
+.header__right {
+	width: 60%;
+	display: flex;
+	align-items: center;
+	position: relative;
+
+	@include breakpoint($tablet-sm-bp) {
+		justify-content: flex-end;
+	}
+}
+
+.header__alert {
+	position: relative;
+	padding: 0;
+	margin: 0 3.5rem;
+
+	background: none;
+	border: 0;
+	transition: fill .2s linear;
+
+	svg {
+		fill: $gray;
+
+		&:hover {
+			fill: darken($gray, 10%);
+		}
+	}
+
+	&:after {
+		content: "";
+		display: block;
+		width: 1.2rem;
+		height: 1.2rem;
+
+		position: absolute;
+		top: -1rem;
+		right: -1rem;
+
+		background-color: $primary-4;
+		border-radius: 50%;
+	}
+
+	@include breakpoint($tablet-bp) {
+		margin: 0 2rem;
+	}
+}
+
+.header__actions {
+	display: flex;
+
+	& .header-connect {
+		display: none;
+	}
+
+	@include breakpoint($mobile-bp) {
+		display: none;
+	}
+}
+
+.header__notification {
+	display: flex;
+	align-items: center;
+}
+
+.header__connected {
+	display: flex;
+	position: relative;
+	margin-left: 1.2rem;
+	justify-content: space-between;
+	align-items: center;
+	padding: .4rem 1.2rem .4rem .4rem;
+
+	border: 2px solid var(--color-sec);
+	border-radius: 90px;
+
+	@include breakpoint($tablet-sm-bp) {
+		border-color: $primary-1;
+		padding: 0;
+	}
+
+	@include breakpoint($mobile-bp) {
+		margin-right: 4.5rem;
+	}
+}
+
+.header__connected-img {
+	overflow: hidden;
+	padding: 0;
+
+	border-radius: 50%;
+	background: none;
+	border: 0;
+
+	img {
+		display: block;
+		width: 3.2rem;
+		height: 3.2rem;
+	}
+}
+
+.header__connected-count {
+	margin-left: 1rem;
+
+	color: var(--color-bl);
+	font-size: 1.4rem;
+	font-weight: 700;
+	text-transform: uppercase;
+
+	b {
+		color: $primary-4;
+	}
+
+	@include breakpoint($tablet-sm-bp) {
+		display: none;
+	}
+}
+
+.header__profile {
+	display: none;
+	padding: 3.2rem 1.6rem;
+
+	position: absolute;
+	top: calc(100% + 1.7rem);
+	left: -78%;
+	z-index: 2;
+
+	background-color: $white;
+	box-shadow: 0px 16px 64px 0
+	rgba(31, 47, 70, 0.4);
+	border-radius: 1.2rem;
+
+	html.dark & {
+		background-color: $black;
+		box-shadow: 0px 16px 64px -48px
+		rgba(18, 27, 40, 0.8);
+
+		&:before {
+			border-bottom-color: $black;
+		}
+	}
+
+	&:before {
+		content: ""; 
+		
+		position: absolute;   
+		bottom: 100%;
+		left: 50%;
+		z-index: 2;
+
+		border: solid transparent;
+		border-bottom-color: $white;
+		border-width: 16px;
+		margin-left: -18px;
+	}
+
+	@include breakpoint($tablet-sm-bp) {
+		left: -21rem;
+
+		&:before {
+			display: none;
+		}
+	}
+
+	&.active {
+		display: block;
+	}
+}
+
+.header__profile-name {
+	color: var(--color-bl);
+	font-size: 2.4rem;
+	font-weight: 600;
+}
+
+.header__profile-wallet {
+	margin-bottom: 1rem;
+
+	a {
+		color: $gray;
+		font-size: 1.4rem;
+		font-weight: 500;
+	}
+}
+
+.header__balance {
+	padding: .8rem;
+	margin-bottom: 2rem;
+
+	box-shadow: 0px 24px 24px 0
+	rgba(15, 15, 15, 0.2);
+	border-radius: 16px;
+}
+
+.header__balance-main {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.header__balance-logo {
+	display: block;
+	margin-right: 1.5rem;
+	width: 4rem;
+	height: 4rem;
+}
+
+.header__balance-title {
+	font-size: 1.2rem;
+	color: $gray;
+}
+
+.header__balance-count {
+	color: var(--color-text);
+	font-size: 2.4rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.header__profile-item {
+	display: flex;
+	padding: 1.8rem 0 1.4rem;
+
+	& + & {
+		border-top: 1px solid var(--color-sec);
+	}
+
+	&:last-child {
+		padding-bottom: 0;
+	}
+
+	&--checkbox {
+		justify-content: space-between;
+	}
+}
+
+.header__profile-item-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.header__profile-item-icon {
+	margin-right: 1rem;
+
+	fill: $gray;
+	width: 2rem;
+	height: 2rem;
+}
+
+.header__profile-link {
+	font-size: 1.4rem;
+	font-weight: 700;
+	color: $gray;
+
+	&:hover {
+		text-decoration: none;
+	}
+}

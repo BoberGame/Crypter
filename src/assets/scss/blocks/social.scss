@@ -1,0 +1,26 @@
+.social {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 -1rem;
+
+	&--profile {
+		margin: 4rem -1rem;
+	}
+}
+
+.social__item {
+	margin: 0 1rem;
+	transition: transform .25s ease-in;
+
+	&:hover {
+		transform: translateY(-.4rem);
+	}
+}
+
+.social__icon {
+	width: 2rem;
+	height: 2rem;
+
+	fill: $gray;
+}

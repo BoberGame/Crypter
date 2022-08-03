@@ -1,0 +1,20 @@
+.warning {
+	display: block;
+	padding: 2.4rem 2.4rem 2.4rem 7.2rem;
+	margin-top: 3.2rem;
+
+	color: $primary-3;
+	border-radius: .8rem;
+	background: rgba($primary-3, .08)
+	url(../images/icons/warning-icon.svg)
+	center left 2.4rem no-repeat;
+}
+
+.warning__title {
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+.warning__subtitle {
+	font-size: 1.4rem;
+}
