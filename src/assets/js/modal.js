@@ -31,7 +31,7 @@ const modalClick = (targetItem) => {
   modal.classList.add('show');
   BODY.classList.add('no-scroll');
 
-  changeStyles();
+  changeStyles(modalContent);
 };
 
 document.addEventListener('click', (event) => {

@@ -2,13 +2,15 @@
 
 const CREATE_PREVIEW_BTN = document.querySelector('.create__preview-btn');
 
-export const changeStyles = (item) => {
-  const time = 1000;
+const changeStyles = (item) => {
+  const time = 200;
   setTimeout(() => {
     item.style.opacity = '1';
     item.style.transform = 'none';
   }, time);
 };
+
+export {changeStyles}
 
 if (CREATE_PREVIEW_BTN) {
   const createWindow = {

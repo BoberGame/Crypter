@@ -3936,6 +3936,35 @@ html.dark .actions__icon--close:hover {
     }
 }
 
+.create__close {
+    display: none;
+    position: absolute;
+    top: 2.4rem;
+    right: 2.4rem;
+    padding: 1.1rem;
+    margin: 0;
+    width: 4rem;
+    height: 4rem;
+    border: 2px solid var(--color-sec);
+    background: none;
+    border-radius: 50%;
+    transition: -webkit-transform 0.2s linear;
+    transition: transform 0.2s linear;
+    transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+.create__close svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    fill: var(--color-text);
+}
+
+@media (max-width: 768px) {
+    .create__close {
+        display: block;
+    }
+}
+
 .create__header {
     display: -ms-flexbox;
     display: flex;
@@ -4475,18 +4504,6 @@ html.dark .create__preview {
     width: 1.4rem;
     height: 1.4rem;
     fill: var(--color-text);
-}
-
-.modal__close--create {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .modal__close--create {
-        display: block;
-        top: 2.4rem;
-        right: 2.4rem;
-    }
 }
 
 .modal__close:hover {
