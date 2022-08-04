@@ -5,8 +5,8 @@ const loadData = {
   get loadMoreBtnProfile() {
     return document.querySelector('#loadMoreBtnProfile');
   },
-  requestURL: 'data.html',
-  requestURL2: 'data-2.html',
+  requestURL: 'dist/data.html',
+  requestURL2: 'dist/data-2.html',
 };
 
 const createItem = (data, btn) => {
